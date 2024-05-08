@@ -1,0 +1,41 @@
+footer{
+    background: $footerBG;
+    padding: 4rem 0;
+    position: relative;
+    &::before{
+        content: "";
+        background-image: url(../images/footer-09.png);
+        mix-blend-mode: overlay;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+    }
+    .container{
+        position: relative;
+        .footer-widgets{
+            p{
+                text-align: center;
+                i{
+                    display: block;
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                }
+                margin-bottom: 0;
+                color: $colorWhite;
+                a{
+                    color: $colorWhite;
+                    font-size: 2rem;
+                    transition: $transition;
+                    &:hover{
+                        color: rgba($colorWhite, $alpha: 0.7);
+                    }
+                }
+            }
+        }
+    }
+}

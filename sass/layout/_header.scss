@@ -1,0 +1,105 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    background: transparent;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    @include respond (maxWidth992) {
+        position: fixed;
+    z-index: 1050;
+    .navbar-collapse {
+    position: fixed;
+    top: 0;
+    background: $colorPrimary;
+    height: calc(100vh);
+    box-shadow: rgba($colorBlack, 0.25) 0px 25px 50px -12px;
+    width: 28rem;
+    @media screen and (max-width:29rem) {
+        width: 80%;
+    }
+    transform: translateX(-100%);
+    left: 0;
+    padding: 20px;
+    overflow: hidden;
+    &.show{
+        transform: translateX(0);
+    }
+    .navbar-nav{
+        overflow: auto;
+    height: 100%;
+    }
+}
+    }
+    .navbar-toggler{
+        padding: 0;
+        border: none;
+    }
+        .navbar-brand{
+            img{
+                width: 20rem;
+                // filter: brightness(20) invert(0);
+            }
+        }
+        i.fa-solid.fa-bars{
+            font-size: 2rem;
+            color: $colorWhite;
+            @include respond (maxWidth992){
+                color: rgba($colorBlack, 1);
+            }
+        }
+        .navbar-toggler {
+            &:focus {
+                border: none !important;
+                box-shadow: none;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                &:not(:last-child){
+                    padding-right: 2rem;
+                    margin-top: 0.5rem;
+                    @include respond (maxWidth992) {
+                        border-bottom: 1px solid rgba($colorWhite, $alpha: 0.5);
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    }
+                }
+                a{
+                    font-weight: 500;
+                    color: $colorWhite;
+                    font-size: 15px;
+                }
+                .global-btn-one{
+                    &:hover{
+                        color: rgba($colorBlack, 1)!important;
+                    }
+                }
+            }
+        }
+
+        &.fixed-top {
+            top: -40px;
+            transform: translateY(40px);
+            transition: transform .3s;
+            background: $colorBlack;
+            position: fixed!important;
+            .nav-link{
+                color: $colorWhite!important;
+            }
+            .navbar-brand{
+            img{
+                // filter: brightness(20) invert(0);
+            }
+        }
+        }
+         @include respond (maxWidth992) {
+                a.navbar-brand.for-mobile{
+                    display: none;
+                }
+            }
+    }
+    .header-sapce{
+        height: 123.54;
+    }

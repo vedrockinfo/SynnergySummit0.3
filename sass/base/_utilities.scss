@@ -69,7 +69,7 @@
 
     &:before {
       content: "";
-      background-image: url("../images/primary-list-01.png");
+      background-image: url("../images/check.png");
       background-size: cover;
       position: absolute;
       top: 15px;
@@ -77,6 +77,40 @@
       width: 20px;
       height: 20px;
       transform: translateY(-50%);
+    }
+  }
+}
+
+.quote-list {
+  margin-left: 7rem;
+    margin-top: 5rem;
+  @media screen and (max-width:575px) {
+    padding: 0;
+    margin-left: 4rem;
+  }
+
+  @include respond (small-desktop-after) {
+    padding-left: 5rem;
+  }
+
+  li {
+    position: relative;
+    color: rgba($colorWhite, $alpha: 1);
+    &:not(:last-child){
+      padding-bottom: 2rem;
+    }
+    &:before {
+      content: "";
+      background-image: url("../images/icons/quotes-01.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+    left: -7rem;
+    width: 5rem;
+    height: 3.2rem;
+    transform: rotate(0deg);
+    opacity: 0.6;
     }
   }
 }
@@ -294,13 +328,32 @@
   gap: 5px;
 
   button {
-    background: $colorBgBlue !important;
-    border: 1px solid $colorBgBlue !important;
+    background: $colorPrimary !important;
+    border: 1px solid $colorPrimary !important;
     height: 3rem;
     width: 3rem;
 
     i {
       color: rgba($colorWhite, $alpha: 1);
     }
+  }
+}
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 5rem;
+  height: 5rem;
+  background-color: $colorPrimary;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 999;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  i{
+    color: $colorWhite;
+    font-size: 18px;
   }
 }
