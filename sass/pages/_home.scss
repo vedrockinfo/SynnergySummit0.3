@@ -32,6 +32,9 @@
             .top-heads{
                 text-align: center;
                 color: $colorFourth;
+                @include respond (maxWidth768) {
+                    margin-top: 4rem;
+                }
                 span{
                     font-size: 16px;
                     text-transform: uppercase;
@@ -51,7 +54,7 @@
                 border-bottom: 3px solid;
                 border-color: $colorPrimary;
                 padding: 0.5rem 6rem;
-                margin-top: 4rem;
+                margin-top: 2rem;
                 width: fit-content;
                 p{
                     margin-bottom: 0;
@@ -462,6 +465,9 @@ h4.title {
                 }
         }
         .threads-grid-items{
+            @include respond (maxWidth992){
+                padding: 0 1.5rem;
+            }
             @include respond (minWidth992){
                 flex: 0 0 50%;
             max-width: 50%;
@@ -618,6 +624,7 @@ h4.title {
     .awards-pic{
             position: relative;
             margin-right: 1rem;
+            margin-bottom: 4rem;
             .certfy{
             }
             .trophy{
@@ -634,15 +641,26 @@ h4.title {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
+            @media screen and (max-width:1200px) and (min-width:992px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width:768px) and (min-width:575px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width:992px) {
+                margin-bottom: 2rem;
+            }
+            @media screen and (max-width:575px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
             .real-box{
                 background: $colorPrimary;
                 text-align: center;
                 padding: 1rem 0;
                 width: 100%;
-                margin-top: 4rem;
                 span{
                     color: rgba($colorWhite, $alpha: 1);
-                    font-weight: 700;
+                    font-weight: 400;
                     font-size: 14px;
                 }
             }
@@ -712,7 +730,7 @@ h4.title {
   }
 
   @include respond(maxWidth768) {
-    margin-top: 0;
+    margin-top: 3rem;
   }
   .news-arapper{
     position: relative;
@@ -752,8 +770,7 @@ h4.title {
   justify-content: flex-end;
   gap: 7.5px;
   button{
-    i{
-        background: #11823b;
+    background: #11823b;
   color: #fff;
   width: 35px;
   height: 35px;
@@ -761,6 +778,8 @@ h4.title {
   place-content: center;
   margin-top: 30px;
   transition: all 0.4s;
+    i{
+        
  &:hover{
     background: $colorSecondary;
  }
@@ -890,6 +909,12 @@ ul{
 .sunita__img img {
     height: 20rem;
 }
+.link-one{
+    @include respond (maxWidth992){
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
 }
 .rajnath{
     
@@ -908,7 +933,10 @@ ul{
         .img-wrapper{
             overflow: hidden;
             img{
-                @media screen and (max-width:1199.9px) {
+                @include respond (maxWidth992){
+                    height: 33rem;
+                }
+                @media screen and (max-width:1199.9px) and (min-width:992px) {
                     height: 55rem;
                 }
                 @media screen and (min-width:1200px) and (max-width:1399.9px) {
@@ -923,20 +951,26 @@ ul{
             }
         }
         .rajnath-content{
+            @include respond (maxWidth992){
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
             span{
                 font-size: 3rem;
                 line-height: 1;
-                font-weight: 200;
+                @include respond (maxWidth768){
+                    font-size: 1.8rem;
+                }
             }
             li{
-                font-weight: 200;
+                font-weight: 400;
             }
             .r-sign{
                 text-align: right;
                 margin-top: 2rem;
                 img{
                     width: 18rem;
-                    transform: rotate(-10deg);
+                    transform: rotate(-10deg) translateX(-10px);
                 }
             }
             @media screen and (max-width:1199.9px) {
@@ -966,4 +1000,307 @@ ul{
     bottom: 10px;
     right: 10px;
 }
+}
+
+.world-largest-school{
+    .founder-card{
+        text-align: center;
+    .founder-pics{
+        overflow: hidden;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom:0.5rem;
+    outline: 3px solid #48bf53;
+    border: 3px solid transparent;
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+        img{
+            transition: $transition;
+            width: 19rem;
+    height: 19rem;
+    object-fit: cover;
+        }
+    }
+    .founder-info{
+        
+    }
+}
+.col-md-6{
+    &:first-child{
+        @include respond (maxWidth768){
+            margin-bottom: 2rem;
+        }
+        .content-para{
+            border-color: #0b54a0;
+        }
+    }
+    &:last-child{
+        .content-para{
+            border-color: #11823b;
+        }
+    }
+}
+.content-para{
+    padding: 2rem;
+    border: 2px solid;
+    border-radius: 1rem;
+    .cms{
+        float: left;
+    height: 6rem;
+    padding: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    background: #0b54a0;
+    }
+    .devi{
+        float: left;
+    height: 6rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    }
+}
+.img-wrapper{
+    margin-top: 4rem;
+    overflow: hidden;
+
+}
+}
+.alfa-implementation {
+  @media screen and (min-width: 768.1px) {
+    .row.mobile {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .row.desktop {
+      display: none;
+    }
+  }
+  ul.nav-pills {
+    flex-direction: column;
+    .nav-item {
+      &:not(:last-child) {
+        border-bottom: 1px solid $colorWhite;
+      }
+      &:first-child{
+        .nav-link{
+            border-radius: 1rem 1rem 0 0;
+        }
+      }
+      &:last-child{
+        .nav-link{
+            border-radius: 0 0 1rem 1rem;
+        }
+      }
+    }
+    .nav-link {
+      text-align: left;
+      width: 100%;
+      background: $colorPrimary;
+      color: $colorWhite;
+      padding: 14.5px 10px;
+      p {
+        margin-bottom: 0;
+        strong {
+    font-size: 1.5rem;
+    font-weight: normal;
+    @media screen and (max-width:1200px){
+        font-size: 1rem;
+    }
+}
+      }
+      &.active {
+        background: $colorSecondary;
+      }
+    }
+  }
+  .partnerGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    @media screen and (min-width: 768.1px) and (max-width: 1199.9px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      display: grid;
+    }
+    .partnerGridItems {
+      overflow: hidden;
+      border: 3px solid $colorWhite;
+      outline: 3px solid $colorSecondary;
+      border-radius: 10px;
+      @media screen and (min-width:768px) {
+        position: relative;
+        flex: 0 0 calc(33.33% - 10px);
+        max-width: calc(33.33% - 10px);
+        &::before{
+        content: "";
+        background-image: radial-gradient(transparent, rgba($colorWhite, 0.25));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition;
+        height: 100%;
+      }
+      }
+      @media screen and (max-width: 576px) {
+        border: 1px solid #fff;
+        outline: 2px solid $colorSecondary;
+        border-radius: 5px;
+      }
+      &:hover {
+      &::before{
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      }
+        img {
+          transform: scale(1.2);
+        }
+      }
+      img {
+        transition: all 0.5s ease-in;
+        @include respond (minWidth992){
+            min-height: 207.31px;
+            object-fit: cover;
+            object-position: top;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .accordion-button {
+      background-color: $colorPrimary;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: $colorWhite;
+      padding: 10px;
+      &:focus,
+      &:focus-visible {
+        box-shadow: none;
+      }
+      &::after {
+        filter: brightness(0) invert(8);
+        transform: scale(0.7);
+      }
+      &.accordion-button:not(.collapsed) {
+        color: $colorWhite !important;
+        background-image: url(../images/bg/yellow-background.jpg);
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+.just-45-days{
+    .fastest{
+        font-size: 3rem;
+    line-height: 1;
+    font-weight: 700;
+    @include respond (maxWidth768){
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: normal;
+    }
+    }
+    .evidence{
+        font-size: 2.4rem;
+    line-height: 1;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: $colorPrimary;
+    display: inline-block;
+    color: rgba($colorWhite, $alpha: 1);
+    @include respond (maxWidth768){
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: normal;
+    }
+    }
+    .district-grid{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5rem;
+        @include respond (maxWidth992){
+            margin-bottom: 2rem;
+        }
+        @include respond (maxWidth768){
+            flex-direction: column;
+            img{
+                rotate: (90deg);
+                transform: scale(0.25);
+            }
+        }
+        .district-items{
+            .circle{
+                width: 18rem;
+                height: 18rem;
+                background: rgba($colorWhite, $alpha: 1);
+                border: 1.4rem solid $colorPrimary;
+                text-align: center;
+                border-radius: 100%;
+                display: grid;
+                place-content: center;
+                strong{
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: $colorPrimary;
+                }
+                .how-much{
+                    line-height: 1;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    .g-literacy{
+        figure{
+            position: relative;
+            height: 40rem;
+            &::before{
+                content: "";
+                background: #000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.3;
+            }
+            @include respond (minWidth992){
+                height: 42rem;
+            }
+            img{
+                width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            }
+            figcaption{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: rgba($colorPrimary, 0.8);
+                color: $colorWhite;
+                padding: 0.5rem 3rem;
+                @include respond (minWidth992){
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
 }
