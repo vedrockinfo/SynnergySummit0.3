@@ -235,6 +235,12 @@ h6 {
       height: 3.2rem;
       transform: rotate(0deg);
       opacity: 0.6; }
+      @media only screen and (max-width: 768px) {
+        .quote-list li:before {
+          top: 5px;
+          left: -5rem;
+          width: 4rem;
+          height: 2.5rem; } }
 
 .inner-hero-section {
   position: relative;
@@ -832,6 +838,10 @@ footer {
           display: inline-block;
           margin-right: 10px; } }
 
+@media only screen and (max-width: 992px) {
+  .threads-area .threads-grid {
+    margin-top: 2rem; } }
+
 @media only screen and (min-width: 992.1px) {
   .threads-area .threads-grid {
     display: flex;
@@ -848,7 +858,9 @@ footer {
 
 @media only screen and (max-width: 992px) {
   .threads-area .threads-grid .threads-grid-items {
-    padding: 0 1.5rem; } }
+    padding: 0 1.5rem; }
+    .threads-area .threads-grid .threads-grid-items .img-wrapper {
+      margin-top: 2rem; } }
 
 @media only screen and (min-width: 992.1px) {
   .threads-area .threads-grid .threads-grid-items {

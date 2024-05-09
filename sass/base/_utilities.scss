@@ -111,6 +111,12 @@
     height: 3.2rem;
     transform: rotate(0deg);
     opacity: 0.6;
+    @include respond (maxWidth768){
+      top: 5px;
+    left: -5rem;
+    width: 4rem;
+    height: 2.5rem;
+    }
     }
   }
 }
