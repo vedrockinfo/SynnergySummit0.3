@@ -71,6 +71,10 @@
                 text-align: center;
                 padding: 3rem;
                 margin-top: 5rem;
+                .link-wrapper a{
+                    margin-top: 2rem;
+                    display: inline-block;
+                }
                 p{
                     font-weight: 100!important;
                     font-size: 36px;
@@ -759,6 +763,14 @@ h4.title {
 }
 }
     .news-img{
+        position: relative;
+        .shikska{
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            width: 10rem;
+    height: auto;
+        }
         img{
             height: 251.48px;
             width: 100%;
