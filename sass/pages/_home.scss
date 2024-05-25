@@ -113,6 +113,28 @@
         }
     }
 }
+
+.logo-grids{
+    .logo-area{
+        background: rgba($colorWhite, $alpha: 1);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        padding: 5rem 0;
+        border-radius: 2rem;
+        .col-md-6{
+            @include respond (minWidth768){
+                &:first-child{
+                    border-right: 1px solid rgba($colorBlack, 0.3);
+                }
+            }
+        }
+        img{
+            max-height: 12rem;
+    margin: auto;
+    display: block;
+    padding: 0 50px;
+        }
+    }
+}
 .about{
     .description{
         font-size: 16px;

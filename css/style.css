@@ -42,7 +42,7 @@ h6 {
 
 .heading-hero-primary {
   text-transform: uppercase;
-  font-size: 72px;
+  font-size: 42px;
   font-weight: 700;
   color: #fcd000;
   text-align: center;
@@ -63,7 +63,7 @@ h6 {
 
 .heading-hero-secondary {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -403,14 +403,15 @@ h6 {
   padding: 10px 24px;
   line-height: 1;
   text-transform: capitalize;
-  border: 1.9px solid #086945;
-  background: transparent;
+  border: 1.9px solid #ffffff;
+  background: #ffffff;
   color: #086945;
   transition: 0.4s ease;
   display: inline-block; }
   .global-btn-three:hover {
     color: #ffffff;
-    background: #086945; }
+    background: #086945;
+    border-color: #ffffff; }
 
 footer {
   background: #1d263b;
@@ -608,6 +609,20 @@ footer {
           object-fit: cover;
           object-position: center;
           transition: all 0.5s; }
+
+.logo-grids .logo-area {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  padding: 5rem 0;
+  border-radius: 2rem; }
+  @media only screen and (min-width: 768.1px) {
+    .logo-grids .logo-area .col-md-6:first-child {
+      border-right: 1px solid rgba(55, 52, 53, 0.3); } }
+  .logo-grids .logo-area img {
+    max-height: 12rem;
+    margin: auto;
+    display: block;
+    padding: 0 50px; }
 
 .about .description {
   font-size: 16px;

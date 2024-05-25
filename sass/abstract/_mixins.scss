@@ -39,13 +39,14 @@
     padding: 10px 24px;
     line-height: 1;
     text-transform: capitalize;
-    border: 1.9px solid $colorPrimary;
-    background: transparent;
+    border: 1.9px solid $colorWhite;
+    background: $colorWhite;
     color: $colorPrimary;
     transition: $transition;
     display: inline-block;
     &:hover{
         color: $colorWhite;
         background: $colorPrimary;
+        border-color: $colorWhite;
     }
 }
