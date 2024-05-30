@@ -1268,7 +1268,10 @@ footer {
     font-size: 14px; }
 
 .welcome-now .sunita__img img {
-  height: 20rem; }
+  height: 22rem;
+  object-fit: cover;
+  width: 22rem;
+  object-position: top; }
 
 @media only screen and (max-width: 992px) {
   .welcome-now .link-one {

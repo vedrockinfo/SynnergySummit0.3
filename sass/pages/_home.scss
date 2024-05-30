@@ -947,7 +947,10 @@ ul{
     }
 }
 .sunita__img img {
-    height: 20rem;
+    height: 22rem;
+    object-fit: cover;
+    width: 22rem;
+    object-position: top;
 }
 .link-one{
     @include respond (maxWidth992){
