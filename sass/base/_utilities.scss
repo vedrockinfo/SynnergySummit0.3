@@ -415,3 +415,28 @@
     }
   }
 }
+
+.ring-border {
+  margin: 7rem auto;
+  background: #fff;
+  height: 5px;
+  width: 75%;
+  position: relative;
+  &::before, &::after{
+    content: "";
+    background: transparent;
+    border: 5px solid rgba($colorWhite, $alpha: 1);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::before{
+    left: -2rem;
+  }
+  &::after{
+    right: -2rem;
+  }
+}
