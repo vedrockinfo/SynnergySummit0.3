@@ -34,9 +34,13 @@
                 color: $colorFourth;
                 @include respond (maxWidth768) {
                     margin-top: 4rem;
+                }.synergy-logo{
+                    margin-bottom: 1rem;
+                    width: 28rem;
                 }
-               img{
+               .devi-logo{
                 width: 17rem;
+                display: none;
                }
                 .hero-top-heading{
                         font-size: 18px;
@@ -56,6 +60,11 @@
                     color: $colorPrimary;
                     font-size: 2rem;
     text-transform: uppercase;
+    small{
+        font-size: 65%;
+        position: relative;
+        top: -2px;
+    }
                 }
             }
             .literater-bg{
@@ -266,6 +275,66 @@ h4.title {
     color: $colorPrimary;
     transition: $transition;
 }
+.sdg-table{
+    border: 1px solid rgba($colorBlack, 0.3);
+    & > .row{
+        border-bottom: 1px solid rgba($colorBlack, 0.3);
+        &:nth-child(odd){
+            background: rgba($colorBlack, 0.08);
+        }
+
+        &:last-child{
+            border-bottom: none;
+        }
+        .col-8{
+            padding: 5px 15px;
+            place-content: space-evenly;
+            @include respond (maxWidth575){
+                width: 58.666667%;
+                padding: 5px 8px;
+            }
+        }
+        .col-1 {
+            display: flex;
+            align-items: center;
+            @include respond (maxWidth575){
+                justify-content: center;
+            }
+            .row{
+                .col-12{
+                    padding: 5px 15px;
+                    @include respond (maxWidth575){
+                        padding: 5px 8px;
+                    }
+                    &:not(:last-child){
+                        border-bottom: 1px solid rgba($colorBlack, 0.3);
+                    }
+                }
+            }
+        }
+        .col-3 {
+            display: flex;
+            align-items: center;
+            border-left: 1px solid rgba($colorBlack, 0.3);
+            border-right: 1px solid rgba($colorBlack, 0.3);
+            @include respond (maxWidth575){
+                width: 33%;
+            }
+            .row{
+                .col-12{
+                    padding: 5px 15px;
+                    @include respond (maxWidth575){
+                        padding: 5px 8px;
+                    }
+                    &:not(:last-child){
+                        border-bottom: 1px solid rgba($colorBlack, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+
 .content-para{
     margin-bottom: 3rem;
     text-align: center;
@@ -640,8 +709,10 @@ h4.title {
             }
             .real-ch-grid-item{
                 &:nth-child(2){
-                    grid-column: span 2;
+                    @include respond (minWidth575){
+                        grid-column: span 2;
     grid-row: 2;
+                    }
                 }
             }
             .real-box{
@@ -1308,7 +1379,7 @@ ul{
         height: 100%;
         img{
             @include respond (minWidth992){
-                height: 50rem;
+                height: 32rem;
         width: 100%;
         object-fit: cover;
         object-position: top;
@@ -1324,7 +1395,8 @@ ul{
         border: 1px solid rgba($colorPrimary, 0.3);
         box-shadow: $boxShadowOne;
         border-radius: 1rem;
-        height: 100%;
+        height: 212px;
+    margin-bottom: 2rem;
         .heading-tertiary{
             background: rgba($colorPrimary, $alpha: 1);
             font-size: 1.6rem;
@@ -1365,6 +1437,25 @@ ul{
     }
 }
 .fln-fair{
+    padding: 7rem 1.5rem;
+    background: #fcd000;
+    table{
+        background: rgba($colorWhite, $alpha: 1);
+        margin-bottom: 3rem;
+        th, td{
+            &:not(:last-child){
+                border-right: 1px solid rgba(#000, 0.2);
+            }
+        }
+    }
+
+  @include respond(maxWidth992) {
+    padding: 5rem 1.5rem;
+  }
+
+  @include respond(maxWidth768) {
+    padding: 3rem 1.5rem;
+  }
     .largest-fln-grid{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1380,6 +1471,7 @@ ul{
             box-shadow: $boxShadowOne;
             .content-para{
                 padding: 2rem;
+                text-align: center;
                 p{
                     font-weight: 500;
 
@@ -1391,19 +1483,10 @@ ul{
         overflow-x: hidden;
     }
     .container{
-        background: #fcd000;
+        
         
         .col-lg-8, .col-lg-4{
             position: relative;
-            padding: 7rem 1.5rem;
-
-  @include respond(maxWidth992) {
-    padding: 5rem 1.5rem;
-  }
-
-  @include respond(maxWidth768) {
-    padding: 3rem 1.5rem;
-  }
             @include respond (minWidth992){
                 &::before{
                     content: "";
